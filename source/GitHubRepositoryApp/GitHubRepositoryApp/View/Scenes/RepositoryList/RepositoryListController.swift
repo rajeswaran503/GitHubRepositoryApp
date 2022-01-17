@@ -8,22 +8,36 @@
 import UIKit
 
 class RepositoryListController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel:RespositoryViewModel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       registerCells()
+        viewModel = RespositoryViewModel(NetworkManager(), coordinator: RepositoryCoordinator.vi(Self))
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func registerCells(){
+        tableView.register(UINib(nibName: "\(RespositoryListCell.self)", bundle: .main), forCellReuseIdentifier: RespositoryListCell.identifier)
+        tableView.dataSource = self
     }
-    */
+}
 
+
+extension RepositoryListController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RespositoryListCell.identifier) as? RespositoryListCell else { return UITableViewCell()}
+        return cell
+    }
+    
+    
 }

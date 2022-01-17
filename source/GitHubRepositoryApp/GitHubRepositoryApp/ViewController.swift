@@ -13,6 +13,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //https://api.github.com/search/repositories?q=ios&page=0&per_page=10
+//        NetworkManager.fetchData(urlString: "https://api.github.com/search/repositories?q=ios&page=0&per_page=10") { (result : Result<RepositoryResponse,Error>) in
+//            switch result {
+//            case .success(let responseModel):
+//                print(responseModel)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 
 

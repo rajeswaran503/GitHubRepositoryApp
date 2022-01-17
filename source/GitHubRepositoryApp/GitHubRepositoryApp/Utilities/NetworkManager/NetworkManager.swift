@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct NetworkManager {
-    
-    static func fetchData<T: Decodable>(urlString: String, completion: @escaping (Result<T,Error>) -> Void) {
+class NetworkManager {
+  
+     func fetchData<T: Decodable>(urlString: String, completion: @escaping (Result<T,Error>) -> Void) {
         guard let url = URL(string: urlString) else { return } // or throw an error
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let err = error {

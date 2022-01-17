@@ -18,6 +18,13 @@
 		1318B8CF278754E500E5AA1A /* RepositoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B8CD278754E500E5AA1A /* RepositoryDetailController.swift */; };
 		1318B8D0278754E500E5AA1A /* RepositoryDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318B8CE278754E500E5AA1A /* RepositoryDetailController.xib */; };
 		132413342795DCCA00603355 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132413332795DCCA00603355 /* NetworkManager.swift */; };
+		132413362795E50E00603355 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132413352795E50E00603355 /* RepositoryModel.swift */; };
+		132413382795EB1700603355 /* RespositryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132413372795EB1700603355 /* RespositryViewModel.swift */; };
+		1324133B2795F0E300603355 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1324133A2795F0E300603355 /* MainCoordinator.swift */; };
+		1324133E2795F20700603355 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1324133D2795F20700603355 /* UIViewControllerExtension.swift */; };
+		13241343279607DD00603355 /* RespositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13241341279607DD00603355 /* RespositoryListCell.swift */; };
+		13241344279607DD00603355 /* RespositoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13241342279607DD00603355 /* RespositoryListCell.xib */; };
+		13241347279609E900603355 /* Appconstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13241346279609E900603355 /* Appconstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		1318B8CD278754E500E5AA1A /* RepositoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailController.swift; sourceTree = "<group>"; };
 		1318B8CE278754E500E5AA1A /* RepositoryDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailController.xib; sourceTree = "<group>"; };
 		132413332795DCCA00603355 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		132413352795E50E00603355 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		132413372795EB1700603355 /* RespositryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositryViewModel.swift; sourceTree = "<group>"; };
+		1324133A2795F0E300603355 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1324133D2795F20700603355 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		13241341279607DD00603355 /* RespositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryListCell.swift; sourceTree = "<group>"; };
+		13241342279607DD00603355 /* RespositoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RespositoryListCell.xib; sourceTree = "<group>"; };
+		13241346279609E900603355 /* Appconstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appconstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,7 @@
 		1318B8C02787536900E5AA1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				132413352795E50E00603355 /* RepositoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +104,8 @@
 		1318B8C12787537000E5AA1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1324133F2796078700603355 /* TableCells */,
+				132413392795F0C200603355 /* Coordinators */,
 				1318B8C5278753B000E5AA1A /* Scenes */,
 			);
 			path = View;
@@ -97,6 +114,7 @@
 		1318B8C22787537F00E5AA1A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				132413372795EB1700603355 /* RespositryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +167,8 @@
 		132413312795DC9E00603355 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				13241345279609C700603355 /* Appconstant */,
+				1324133C2795F1D700603355 /* Extensions */,
 				132413322795DCA800603355 /* NetworkManager */,
 			);
 			path = Utilities;
@@ -160,6 +180,47 @@
 				132413332795DCCA00603355 /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		132413392795F0C200603355 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				1324133A2795F0E300603355 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		1324133C2795F1D700603355 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1324133D2795F20700603355 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1324133F2796078700603355 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				132413402796079500603355 /* RespositoryListCell */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		132413402796079500603355 /* RespositoryListCell */ = {
+			isa = PBXGroup;
+			children = (
+				13241341279607DD00603355 /* RespositoryListCell.swift */,
+				13241342279607DD00603355 /* RespositoryListCell.xib */,
+			);
+			path = RespositoryListCell;
+			sourceTree = "<group>";
+		};
+		13241345279609C700603355 /* Appconstant */ = {
+			isa = PBXGroup;
+			children = (
+				13241346279609E900603355 /* Appconstant.swift */,
+			);
+			path = Appconstant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +283,7 @@
 				1318B8B92787535500E5AA1A /* LaunchScreen.storyboard in Resources */,
 				1318B8CB278754BB00E5AA1A /* RepositoryListController.xib in Resources */,
 				1318B8B62787535500E5AA1A /* Assets.xcassets in Resources */,
+				13241344279607DD00603355 /* RespositoryListCell.xib in Resources */,
 				1318B8B42787535200E5AA1A /* Main.storyboard in Resources */,
 				1318B8D0278754E500E5AA1A /* RepositoryDetailController.xib in Resources */,
 			);
@@ -236,9 +298,15 @@
 			files = (
 				132413342795DCCA00603355 /* NetworkManager.swift in Sources */,
 				1318B8B12787535200E5AA1A /* ViewController.swift in Sources */,
+				1324133E2795F20700603355 /* UIViewControllerExtension.swift in Sources */,
 				1318B8CA278754BB00E5AA1A /* RepositoryListController.swift in Sources */,
 				1318B8CF278754E500E5AA1A /* RepositoryDetailController.swift in Sources */,
+				132413382795EB1700603355 /* RespositryViewModel.swift in Sources */,
 				1318B8AD2787535200E5AA1A /* AppDelegate.swift in Sources */,
+				13241347279609E900603355 /* Appconstant.swift in Sources */,
+				132413362795E50E00603355 /* RepositoryModel.swift in Sources */,
+				1324133B2795F0E300603355 /* MainCoordinator.swift in Sources */,
+				13241343279607DD00603355 /* RespositoryListCell.swift in Sources */,
 				1318B8AF2787535200E5AA1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
