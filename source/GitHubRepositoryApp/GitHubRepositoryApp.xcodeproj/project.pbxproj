@@ -17,6 +17,7 @@
 		1318B8CB278754BB00E5AA1A /* RepositoryListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318B8C9278754BB00E5AA1A /* RepositoryListController.xib */; };
 		1318B8CF278754E500E5AA1A /* RepositoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B8CD278754E500E5AA1A /* RepositoryDetailController.swift */; };
 		1318B8D0278754E500E5AA1A /* RepositoryDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318B8CE278754E500E5AA1A /* RepositoryDetailController.xib */; };
+		132413342795DCCA00603355 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132413332795DCCA00603355 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1318B8C9278754BB00E5AA1A /* RepositoryListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListController.xib; sourceTree = "<group>"; };
 		1318B8CD278754E500E5AA1A /* RepositoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailController.swift; sourceTree = "<group>"; };
 		1318B8CE278754E500E5AA1A /* RepositoryDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailController.xib; sourceTree = "<group>"; };
+		132413332795DCCA00603355 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		1318B8AB2787535200E5AA1A /* GitHubRepositoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				132413312795DC9E00603355 /* Utilities */,
 				1318B8C42787539300E5AA1A /* Resources */,
 				1318B8C32787538800E5AA1A /* Application */,
 				1318B8C22787537F00E5AA1A /* ViewModel */,
@@ -143,6 +146,22 @@
 			path = RepositoryDetail;
 			sourceTree = "<group>";
 		};
+		132413312795DC9E00603355 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				132413322795DCA800603355 /* NetworkManager */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		132413322795DCA800603355 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				132413332795DCCA00603355 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132413342795DCCA00603355 /* NetworkManager.swift in Sources */,
 				1318B8B12787535200E5AA1A /* ViewController.swift in Sources */,
 				1318B8CA278754BB00E5AA1A /* RepositoryListController.swift in Sources */,
 				1318B8CF278754E500E5AA1A /* RepositoryDetailController.swift in Sources */,
