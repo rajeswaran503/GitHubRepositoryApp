@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol RepositoryCoordinator: AnyObject {
-    var viewController:UIViewController {get set}
-}
-
 final class RespositoryViewModel {
     
     unowned let networkManager: NetworkManager
@@ -20,6 +16,8 @@ final class RespositoryViewModel {
     private var repolist:[Item]?
     
     private var totalPages:Int = 0
+    
+    var reloadTableView: (() -> Void)?
     
     
     init(_ network: NetworkManager, coordinator: RepositoryCoordinator) {
@@ -36,8 +34,9 @@ extension RespositoryViewModel {
             case .success(let responseModel):
                 self?.repolist = responseModel.items
                 self?.totalPages = responseModel.totalCount
-                
+                self?.reloadTableView?()
             case .failure(let failure):
+                print(failure)
                 break
             }
         }

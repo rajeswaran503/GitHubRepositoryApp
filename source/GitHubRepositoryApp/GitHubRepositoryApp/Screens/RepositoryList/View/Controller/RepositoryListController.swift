@@ -11,21 +11,33 @@ class RepositoryListController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel:RespositoryViewModel!
     
+    lazy var viewModel = {
+        RespositoryViewModel(NetworkManager(), coordinator: RepositoryCoordinator(self))
+    }()
+        
+    var repoCoordinator:RepositoryCoordinator!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-       registerCells()
-        viewModel = RespositoryViewModel(NetworkManager(), coordinator: RepositoryCoordinator.vi(Self))
+        initTableView()
+        initViewModel()
     }
-
-    private func registerCells(){
-        tableView.register(UINib(nibName: "\(RespositoryListCell.self)", bundle: .main), forCellReuseIdentifier: RespositoryListCell.identifier)
+    
+    
+    private func initTableView(){
+        tableView.register(RespositoryListCell.nib, forCellReuseIdentifier: RespositoryListCell.identifier)
         tableView.dataSource = self
     }
+    
+    private func initViewModel(){
+        viewModel.fetchInitialRepositories()
+        
+    }
+
+   
 }
 
 

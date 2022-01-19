@@ -8,7 +8,7 @@
 import Foundation
 
 
-// MARK: - Welcome
+// MARK: - Repository Model
 struct RepositoryResponse: Codable {
     let totalCount: Int
     let incompleteResults: Bool
@@ -23,7 +23,7 @@ struct RepositoryResponse: Codable {
 
 // MARK: - Item
 struct Item: Codable {
-    let id: Int
+    let idValue: Int
     let nodeID, name, fullName: String
     let itemPrivate: Bool
     let owner: Owner
@@ -71,7 +71,7 @@ struct Item: Codable {
     let score: Int
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case idValue = "id"
         case nodeID = "node_id"
         case name
         case fullName = "full_name"
