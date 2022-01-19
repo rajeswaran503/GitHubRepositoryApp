@@ -10,14 +10,18 @@ import Foundation
 
 // MARK: - Repository Model
 struct RepositoryResponse: Codable {
-    let totalCount: Int
-    let incompleteResults: Bool
-    let items: [Item]
+    let totalCount: Int?
+    let incompleteResults: Bool?
+    let items: [Item]?
+    var message: String?
+    var documentationUrl: String?
+    
 
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
-        case items
+        case items,message
+        case documentationUrl = "documentation_url"
     }
 }
 
@@ -67,7 +71,7 @@ struct Item: Codable {
     let topics: [String]
     let visibility: Visibility
     let forks, openIssues, watchers: Int
-    let defaultBranch: DefaultBranch
+    let defaultBranch: String
     let score: Int
     
     enum CodingKeys: String, CodingKey {
@@ -147,11 +151,6 @@ struct Item: Codable {
     }
 }
 
-enum DefaultBranch: String, Codable {
-    case develop = "develop"
-    case main = "main"
-    case master = "master"
-}
 
 // MARK: - License
 struct License: Codable {
